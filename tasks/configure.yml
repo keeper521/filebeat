@@ -21,3 +21,4 @@
   register: filebeat_setup
   changed_when: false
   until: filebeat_setup is succeeded
+  when: filebeat_kibana_used == 'yes'
